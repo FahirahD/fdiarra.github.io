@@ -6,7 +6,11 @@
     <title>Redirecting...</title>
     <script>
         function redirectToApp() {
-            window.location.href = "myapp://";
+            // Get all URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            // Construct your redirect URL maintaining all parameters
+            const redirectUrl = `myapp://?${urlParams.toString()}`;
+            window.location.replace(redirectUrl);
         }
     </script>
 </head>
