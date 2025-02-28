@@ -9,7 +9,7 @@
             // Get all URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             // Construct your redirect URL maintaining all parameters
-            const redirectUrl = `exp://10.0.0.61:8081?${urlParams.toString()}`;
+            const redirectUrl = `myapp://{urlParams.toString()}`;
             window.location.replace(redirectUrl);
         }
     </script>
